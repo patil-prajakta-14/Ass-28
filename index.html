@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ass-28</title>
+
+    <style>
+        body{
+            background-color: #ffe0b3;
+        }
+        .container{
+            background-color: aliceblue;
+            height: 600px;
+            width: 800px;
+            margin-left: 370px;
+            margin-top: 50px;
+            border: solid  #006699 1px;
+            border-radius: 30px;
+        }
+        .img{
+            height: 500px;
+            width: 700px;
+            padding: 30px 0 20px 50px;
+            
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+
+        }
+        .btn{
+            padding: 5px 10px;
+            border-radius: 0px 20px 20px 20px;
+            border: none;
+            margin: auto 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            box-shadow: 5px 5px 10px 3px #333333 ;
+            transition: 0.3s;
+        }
+        #btn-s{
+            background-color: #ff9900;
+            border: solid 2px #b36b00;
+        }
+        
+        #btn-w{
+            background-color: #ff00aa ;
+            border:solid 2px #990066;
+        }
+        #btn-m{
+            background-color: #258e25;
+            border: solid 2px #155115;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <img src="summer.jpg" class="img" id="img" />
+
+        <div class="btn-container">
+            <button class="btn" id="btn-s" onclick="summer()">
+                Summmer
+            </button>
+
+            <button class="btn" id="btn-w" onclick="winter()">
+                Winter
+            </button>
+
+            <button class="btn" id="btn-m" onclick="mansoon()">
+                Mansoon
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function summer()
+        {
+            const summerImgElement= document.getElementById('img');
+            summerImgElement.src = 'summer.jpg';
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#ffe0b3';
+
+        }
+
+        function winter()
+        {
+            const summerImgElement= document.getElementById('img');
+            summerImgElement.src = 'winter.jpg';
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#ffcccc';
+
+        }
+
+        function mansoon()
+        {
+            const summerImgElement= document.getElementById('img');
+            summerImgElement.src = 'mansoon.jpg';
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#c2efc2';
+
+        }
+    </script>
+</body>
+</html>
